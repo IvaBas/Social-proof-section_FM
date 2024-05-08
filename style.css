@@ -1,0 +1,473 @@
+/*
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+*/
+
+:root {
+    /*Primary*/
+    --crl-very-dark-magenta: hsl(300, 43%, 22%);
+    --crl-soft-pink: hsl(333, 80%, 67%);
+
+    /*Neutral*/
+    --crl-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --crl-light-grayish-magenta: hsl(300, 24%, 96%);
+    --crl-white: hsl(0, 0%, 100%);
+
+    --font-size: 15px;  /* za paragraf */
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+    --font-family: "League Spartan", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+p {
+    font-size: var(--font-size);
+    color: var(--crl-very-dark-magenta);
+}
+
+h1 {
+    font-weight: var(--fw-700);
+    color: var(--crl-very-dark-magenta);
+    font-size: 60px;
+    width: 50%;
+}
+
+.gornji-deo {
+    display: flex;
+    padding: 3rem;
+    /* width: 1200px; */
+    padding: 7rem 7rem 0 7rem;
+}
+
+/* header {
+    width: 20%;
+} */
+
+#head-p {
+    line-height: 1.5;
+    width: 55%;
+    font-size: 20px;
+}
+
+.rated-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: -6rem;
+}
+
+.rated {
+    background-color: var(--crl-light-grayish-magenta);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 32rem;
+    text-align: center;
+    font-weight: var(--fw-500);
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#rate1 {
+    margin-right: 12rem;
+}
+#rate2 {
+    margin-right: 6rem;
+}
+
+.star {
+    /* width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    margin-inline: .3rem; */
+    margin: auto;
+    display: flex;
+}
+
+.star img {
+    margin-right: 0.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.rated p {
+    font-weight: var(--fw-700);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+main {
+    display: flex;
+    padding: 7rem;
+    justify-content: space-between;
+}
+
+.mini-header {
+    display: flex;
+}
+
+.mini-header img {
+    margin: 1rem;
+}
+
+.mini-naslov {
+    /* text-align: end; */
+    margin-top: 1.5rem;
+}
+
+.container {
+    background-color: var(--crl-very-dark-magenta);
+    color: var(--crl-white);
+    padding: 3rem;
+    border-radius: 0.7rem;
+    width: 30%;
+    height: 70%;
+}
+
+#type2 {
+    margin-top: 2rem;
+}
+#type3 {
+    margin-top: 4rem;
+}
+
+img {
+    border-radius: 50%;
+    /* margin: 1.5rem; */
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    color: var(--crl-soft-pink);
+    margin-top: 0.6rem;
+}
+
+.container p {
+    color: var(--crl-white);
+    line-height: 1.4;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+
+
+.attribution {
+    /* position: fixed;
+    left: 0; right: 0; bottom: 0; */
+    text-align: center;
+}
+
+
+/*
+For Mobile Devices – 320px — 480px.
+iPads and Tablets – 481px — 768px.
+Laptops and small screen – 769px — 1024px.
+Large screens and Desktops – 1025px — 1200px.
+TV and Extra Large Screens – 1201px and more.
+*/
+
+@media only screen and (min-width: 1201px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        width: 35%;
+        height: 27rem;
+        margin: 1rem;
+    }
+
+    /* main {
+        padding: 3rem;
+    } */
+
+    /* .gornji-deo {
+        padding: 3rem 4rem 0 4rem;
+    } */
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1200px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gornji-deo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rated-right {
+        margin: 0 auto;
+    }
+
+    #rate1 {
+        margin-right: 0rem;
+    }
+    #rate2 {
+        margin-right: 0rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .container {
+        width: 60%;
+    }
+
+    #type3 {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 660px) and (max-width: 919px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        width: 80%;
+    }
+
+    #head-p {
+        width: 80%;
+    }
+
+    .gornji-deo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rated {
+        display: block;
+    }
+    .rated p {
+        margin: 10px 0rem 10px;
+    }
+    .rated-right {
+        margin: 0 auto;
+    }
+
+    #rate1 {
+        margin-right: 0rem;
+    }
+    #rate2 {
+        margin-right: 0rem;
+    }
+    .star {
+        display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #type3 {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 659px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        width: 80%;
+    }
+
+    #head-p {
+        width: 80%;
+    }
+
+    .gornji-deo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rated {
+        display: block;
+        width: 20rem;
+    }
+    .rated p {
+        margin: 10px 0rem 10px;
+    }
+    .rated-right {
+        margin: 0 auto;
+    }
+
+    #rate1 {
+        margin-right: 0rem;
+    }
+    #rate2 {
+        margin-right: 0rem;
+    }
+    .star {
+        display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #type3 {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        width: 100%;
+    }
+
+    #head-p {
+        width: 100%;
+    }
+
+    .gornji-deo {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .rated {
+        display: block;
+        width: 15rem;
+    }
+    .rated p {
+        margin: 10px 0rem 10px;
+    }
+    .rated-right {
+        margin: 0 auto;
+    }
+
+    #rate1 {
+        margin-right: 0rem;
+    }
+    #rate2 {
+        margin-right: 0rem;
+    }
+    .star {
+        display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #type3 {
+        margin-top: 2rem;
+    }
+
+    .mini-header img {
+        margin: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+}
